@@ -3,7 +3,7 @@ function main() {
         var keywordIterator = AdsApp.keywords() // Get keywords from Google Ads api
             .withCondition("CampaignName = 'Awesome Search Campaign'")
             .forDateRange('LAST_MONTH')
-            .orderBy('Impression DESC')
+            .orderBy('Impressions DESC')
             .get();
 
         while (keywordIterator.hasNext()) {
