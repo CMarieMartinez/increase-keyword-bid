@@ -1,7 +1,7 @@
 function main() {
     function increaseKeywordBid() {
         var keywordIterator = AdsApp.keywords() // Get keywords from Google Ads api
-            .withCondition("CampaignName = 'Awesome Search Campaign'")
+            .withCondition("CampaignName = 'Awesome Target CPA Campaign'")
             .forDateRange('LAST_MONTH')
             .orderBy('Impressions DESC')
             .get();
