@@ -8,7 +8,7 @@ function main() {
 
         while (keywordIterator.hasNext()) {
             var keyword = keywordIterator.next();
-            var metrics = keywords.getStatsFor('LAST_MONTH');
+            var metrics = keyword.getStatsFor('LAST_MONTH');
             var CTR = metrics.getCtr() * 100;   // CTR is a decimal so convert the decimal by 100 for easier reading
             var newBid = metrics.getAverageCpc() * 2;  // Creating doubled CPC
 
